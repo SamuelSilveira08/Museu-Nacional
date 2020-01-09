@@ -69,8 +69,22 @@ nav ul li a {
 	text-transform: uppercase;
 }
 
-nav ul li a:hover {
-	border-bottom: 1px solid #535858;
+.underline-expand {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.underline-expand:after {
+    display:block;
+    content: '';
+    border-bottom: 1px solid #535858;
+    transform: scaleX(0); 
+	transition: transform 350ms ease-in-out;
+	margin-top: 3px;
+}
+
+.underline-expand:hover:after {
+	transform: scaleX(1);
 }
 
 /* Conteudo */
